@@ -9,21 +9,15 @@ const generateRound = () => {
   const randomNumbers = [number1, number2];
 
   const getGreatestCommonDivisor = (num1, num2) => {
-    let remainder;
-    if (num1 > num2) {
-      while (num2 !== 0) {
-        remainder = num2;
-        num2 = num1 % num2;
-        num1 = remainder;
-      }
+    while (num2 !== 0) {
+      const temp = num2;
+      num2 = num1 % num2;
+      num1 = temp;
     }
-    if (num1 < num2) {
-      return getGreatestCommonDivisor(num2, num1);
-    }
-    return remainder;
+    return num1;
   };
 
-  const correctAnswer = getGreatestCommonDivisor(number1, number2);
+  const correctAnswer = String(getGreatestCommonDivisor(number1, number2));
   const question = randomNumbers.join(' ');
   return [question, correctAnswer];
 };
