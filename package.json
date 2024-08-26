@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/Evgeny111111/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Evgeny111111/frontend-project-44/actions)",
+  "description": "5 Brain-Training Games",
   "main": "index.js",
   "type": "module",
   "scripts": {
