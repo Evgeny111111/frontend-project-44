@@ -1,6 +1,6 @@
 import getStart from '../index.js';
 
-const descriptionOfTheGame = 'Answer "yes" if the number is even, otherwise answer "no".';
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const generateRound = () => {
   const getRandomInt = () => Math.floor(Math.random() * 10);
@@ -11,4 +11,4 @@ const generateRound = () => {
   return [question, correctAnswer];
 };
 
-export default () => getStart(descriptionOfTheGame, generateRound);
+export default () => getStart(description, generateRound);

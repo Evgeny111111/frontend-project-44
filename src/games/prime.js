@@ -1,10 +1,10 @@
-import getStart from './index.js';
+import getStart from '../index.js';
+import getRandomInt from '../utils.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const generateRound = () => {
-  const getRandomInt = () => Math.ceil(Math.random() * 10);
-  const number = getRandomInt();
+  const number = getRandomInt(0, 20);
 
   const isPrime = () => {
     for (let i = 2; i < number; i += 1) {
