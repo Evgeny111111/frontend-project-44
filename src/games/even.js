@@ -1,4 +1,4 @@
-import getStart from './index.js';
+import getStart from '../index.js';
 
 const descriptionOfTheGame = 'Answer "yes" if the number is even, otherwise answer "no".';
 

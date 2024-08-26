@@ -1,4 +1,4 @@
-import getStart from './index.js';
+import getStart from '../index.js';
 
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
