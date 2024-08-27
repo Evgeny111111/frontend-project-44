@@ -10,16 +10,17 @@ const generateRound = () => {
 
   const getProgression = () => {
     const result = [];
-    for (let i = 0; i <= lengthProgression; i += 1) {
+    for (let i = 0; i < lengthProgression; i += 1) {
       result.push(beginProgression + i * stepProgression);
     }
     return result;
   };
 
   const progression = getProgression();
-  const missingSymbol = progression.splice(2, 1, '..').join('');
+  const missingIndex = 2;
+  const correctAnswer = progression[missingIndex].toString();
+  progression[missingIndex] = '..';
 
-  const correctAnswer = missingSymbol;
   const question = progression.join(' ');
 
   return [question, correctAnswer];
