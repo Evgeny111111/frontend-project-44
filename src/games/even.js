@@ -1,14 +1,21 @@
 import getStart from '../index.js';
 
+import getRandomInt from '../utils.js';
+
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const generateRound = () => {
-  const getRandomInt = () => Math.floor(Math.random() * 10);
-  const question = getRandomInt();
+  const number = getRandomInt(0, 10);
 
-  const isEven = (num) => num % 2 === 0;
-  const correctAnswer = isEven(question) ? 'yes' : 'no';
+  const isEven = () => number % 2 === 0;
+  const check = () => {
+    const result = isEven(number) ? 'yes' : 'no';
+    return result;
+  };
+
+  const correctAnswer = check();
+  const question = number;
+
   return [question, correctAnswer];
 };
-
 export default () => getStart(description, generateRound);

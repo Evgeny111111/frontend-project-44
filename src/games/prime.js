@@ -17,6 +17,7 @@ const generateRound = () => {
 
   const check = () => {
     const result = isPrime(number) ? 'yes' : 'no';
+
     return result;
   };
 

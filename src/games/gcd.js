@@ -1,26 +1,28 @@
 import getStart from '../index.js';
 
+import getRandomInt from '../utils.js';
+
 const description = 'Find the greatest common divisor of given numbers.';
 
 const generateRound = () => {
-  const getRandomInt = () => Math.ceil(Math.random() * 10);
-  const number1 = getRandomInt();
-  const number2 = getRandomInt();
+  const number1 = getRandomInt(0, 10);
+  const number2 = getRandomInt(0, 10);
+  const randomNumbers = [number1, number2];
 
-  const getGreatestCommonDivisor = (num1, num2) => {
-    let a = num1;
-    let b = num2;
-
-    while (b !== 0) {
-      const remainder = a % b;
-      a = b;
-      b = remainder;
+  const getGreatestCommonDivisor = (a, b) => {
+    let num1 = a;
+    let num2 = b;
+    while (num2 !== 0) {
+      const temp = num2;
+      num2 = num1 % num2;
+      num1 = temp;
     }
-    return a;
+    return Math.abs(num1);
   };
 
-  const correctAnswer = String(getGreatestCommonDivisor(number1, number2));
-  const question = `${number1} ${number2}`;
+  const correctAnswer = getGreatestCommonDivisor(number1, number2);
+  const question = randomNumbers.join(' ');
+
   return [question, correctAnswer];
 };
 
