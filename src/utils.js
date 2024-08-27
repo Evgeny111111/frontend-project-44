@@ -1,4 +1,4 @@
-const getRandom = (min, max) => {
+const getRandomInt = (min, max) => {
   const number = Math.floor(Math.random() * (max - min + 1)) + min;
   return number;
 };
@@ -14,4 +14,4 @@ const getGreatestCommonDivisor = (num1, num2) => {
   return a;
 };
 
-export { getRandom, getGreatestCommonDivisor };
+export default { getRandomInt, getGreatestCommonDivisor };
